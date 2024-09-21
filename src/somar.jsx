@@ -9,11 +9,20 @@ export default function Somar() {
     const [resultado, setResultado] = useState(0);
 
     const somar = () => {
-        const numA = parseFloat(inputA);
-        const numB = parseFloat(inputB);
-
-        setResultado(numA + numB);
-    }
+            // Verifica se os campos estão vazios
+        if (inputA === '' || inputB === '') {
+            setResultado("Por favor, preencha os dois campos.");
+        } else {
+            const numA = parseFloat(inputA);
+            const numB = parseFloat(inputB);
+            // Verifica se os valores digitados são números válidos
+            if (isNaN(numA) || isNaN(numB)) {
+                setResultado("Por favor, insira números válidos.");
+            } else {
+                setResultado(numA + numB);
+            }
+        }
+    };
 
     return(
         <div id="somarPai">

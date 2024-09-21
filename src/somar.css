@@ -21,6 +21,7 @@ p{
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
+
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -35,11 +36,14 @@ input {
     font-weight: 500;
     font-family: inherit;
     background-color: #1a1a1a;
+
+    color: white;
     cursor: pointer;
     transition: border-color 0.25s;
 }
 input:hover {
-    background-color: #3d4192;
+    background-color: #353975;
+    border-color: #3d4192;
 }
 input:focus,
 input:focus-visible {
@@ -56,6 +60,8 @@ button {
     font-weight: 500;
     font-family: inherit;
     background-color: #1a1a1a;
+
+    color: white;
     cursor: pointer;
     transition: border-color 0.25s;
 }
