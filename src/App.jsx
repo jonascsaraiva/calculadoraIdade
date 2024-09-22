@@ -1,15 +1,19 @@
-import './App.css'
+import Somar from './Somar/somar'
+import CalculadoraIdade from './idade/calculadoraIdade'
 
-import Somar from './somar'
-import calculadoraIdade from './calculadoraIdade'
+import './App.css'
 
 function App() {
  
   return (
     <div>
-      <Somar />
-      <calculadoraIdade />
+      
+        <Somar />
+      
+        <CalculadoraIdade />
+      
     </div>
+    
   )
 }
 

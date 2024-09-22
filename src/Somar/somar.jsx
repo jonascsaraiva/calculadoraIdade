@@ -48,7 +48,7 @@ export default function Somar() {
 
             </section>
 
-            <p>{resultado}</p>
+            <h3>{resultado}</h3>
         </div>
     )
 }
