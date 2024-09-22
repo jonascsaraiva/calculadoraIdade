@@ -1,11 +1,30 @@
-#CalculadoraIdade {
-    background-color: red;
-    width: 100px;
-    height: 100px;
+#calculaIdade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 5px 5px;
+
+    border: 1px solid #224094;
+    border-radius: 8px;
 }
 
-h1 {
-    font-size: larger;
+#calculaIdadeFilho {
+    border: transparent;
+    display: flex;
+    gap: 5px; 
+}
+
+select {
+    border-radius: 8px;
+    border: 1px solid #363636;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+
     color: white;
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    cursor: pointer;
+    transition: border-color 0.25s;
 }

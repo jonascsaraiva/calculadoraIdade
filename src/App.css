@@ -11,6 +11,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 a {
@@ -56,4 +57,10 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+#hub {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }

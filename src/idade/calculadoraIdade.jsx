@@ -1,11 +1,14 @@
 import { useState } from 'react';
 
-export default function CalculaIdade() {
-    const [anoNascimento, setAnoNascimento] = useState('');
-    const [mesNascimento, setMesNascimento] = useState('');
+import "./calculadoraIdade.css"
 
+export default function CalculaIdade() {
+    const [anoNascimento, setAnoNascimento] = useState(0);
+    const [mesNascimento, setMesNascimento] = useState("");
+
+    //Tem que atualizar aqui o mês e o ano.
     const anoAtual = 2024;
-    const mesAtual = 9; // Setembro
+    const mesAtual = 9; 
 
     const calcularIdade = () => {
         if (anoNascimento === '' || mesNascimento === '') {
@@ -34,35 +37,37 @@ export default function CalculaIdade() {
         <div id="calculaIdade">
             <h1>Calculadora de Idade</h1>
 
-            <input
-                type="number"
-                placeholder="Digite o ano que você nasceu"
-                value={anoNascimento}
-                onChange={(e) => setAnoNascimento(e.target.value)}
-            />
+            <section id='calculaIdadeFilho'>
+                <input
+                    type="number"
+                    placeholder="Digite o ano que você nasceu"
+                    value={anoNascimento}
+                    onChange={(e) => setAnoNascimento(e.target.value)}
+                />
 
-            <select
-                value={mesNascimento}
-                onChange={(e) => setMesNascimento(e.target.value)}
-            >
-                <option value="">Selecione o mês de nascimento</option>
-                <option value="1">Janeiro</option>
-                <option value="2">Fevereiro</option>
-                <option value="3">Março</option>
-                <option value="4">Abril</option>
-                <option value="5">Maio</option>
-                <option value="6">Junho</option>
-                <option value="7">Julho</option>
-                <option value="8">Agosto</option>
-                <option value="9">Setembro</option>
-                <option value="10">Outubro</option>
-                <option value="11">Novembro</option>
-                <option value="12">Dezembro</option>
-            </select>
+                <select
+                    value={mesNascimento}
+                    onChange={(e) => setMesNascimento(e.target.value)}
+                >
+                    <option value="">Selecione o mês de nascimento</option>
+                    <option value="1">Janeiro</option>
+                    <option value="2">Fevereiro</option>
+                    <option value="3">Março</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Maio</option>
+                    <option value="6">Junho</option>
+                    <option value="7">Julho</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Setembro</option>
+                    <option value="10">Outubro</option>
+                    <option value="11">Novembro</option>
+                    <option value="12">Dezembro</option>
+                </select>
 
-            <button onClick={handleCalcular}>Descobrir a idade</button>
+                <button onClick={handleCalcular}>Descobrir a idade</button>
+            </section>
 
-            <p>{resultado}</p>
+            <h3>{resultado}</h3>
         </div>
     );
 }
